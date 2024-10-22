@@ -28,8 +28,8 @@ export const About = () => {
                         <div className={styles.aboutItemText}>
                             <h3>Frontend Developer</h3>
                             <p>
-                            I'm a UX/UI designer dedicated to creating user-friendly and visually 
-                            appealing designs that improve the user experience.
+                                I'm a UX/UI designer dedicated to creating user-friendly and visually 
+                                appealing designs that improve the user experience.
                             </p>
                         </div>
                     </li>
