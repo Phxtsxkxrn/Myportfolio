@@ -17,12 +17,10 @@ export const Hero = () => {
                 </a>
             </div>
             <img
-                src={getImageUrl("hero/heroImage1.png")}
+                src={getImageUrl("hero/heroImage2.png")}
                 alt="Hero image of me"
                 className={styles.heroImg}
             />
-            <div className={styles.topBlur}/>
-            <div className={styles.bottomBlur}/>
         </section>
     );
 };
