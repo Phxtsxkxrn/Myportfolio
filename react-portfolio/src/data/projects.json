@@ -1,0 +1,9 @@
+[
+  {
+    "title": "ScheduleTable",
+    "imageSrc": "projects/ScheduleTable.png",
+    "description": "Website for Scheduling Engineering Faculty Lectures",
+    "skills": ["ReactJS", "JavaScript", "CSS", "HTML"],
+    "source": "https://github.com/Phxtsxkxrn/ScheduleTable"
+  }
+]
