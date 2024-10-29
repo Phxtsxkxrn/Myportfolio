@@ -7,8 +7,8 @@
     justify-content: space-between;
     margin-top: 49px;
     z-index: 1;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .content {
@@ -79,5 +79,8 @@
 
     .content {
         align-items: center;
+    }
+    .heroImg {
+        width: 50%;
     }
 }
