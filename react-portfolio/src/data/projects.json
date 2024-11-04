@@ -3,7 +3,23 @@
     "title": "ScheduleTable",
     "imageSrc": "projects/ScheduleTable.png",
     "description": "Website for Scheduling Engineering Faculty Lectures",
-    "skills": ["ReactJS", "JavaScript", "CSS", "HTML"],
+    "skills": ["React", "JavaScript", "CSS", "HTML"],
     "source": "https://github.com/Phxtsxkxrn/ScheduleTable"
+  },
+
+  {
+    "title": "Growing Canabis",
+    "imageSrc": "projects/Cannabis.png",
+    "description": "Automated cannabis growing and feeding systems.",
+    "skills": ["Raspberry pi","Linux","Python","React", "JavaScript", "CSS", "HTML"],
+    "picture": "https://drive.google.com/drive/folders/1PK2jCV3BwBNTK_4IfMt1Jl_I2x_dk0Of?usp=drive_link"
+  },
+
+  {
+    "title": "AutoDry Clothes Rack",
+    "imageSrc": "projects/Clothesdrying.jpg",
+    "description": "Automatic Clothes Drying Rack Smart and weatherproof.",
+    "skills": ["Arduino","CSS", "HTML"],
+    "video": "https://drive.google.com/file/d/1O6FCH6C5W0nZ4MtqKUHrmx035Ungg00t/view?usp=sharing"
   }
 ]
