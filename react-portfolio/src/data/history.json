@@ -1,10 +1,37 @@
 [
     {
+      "role": "UX/UI Support",
+      "organisation": "Central Group",
+      "startDate": "21 April 2025",
+      "endDate": "Present",
+      "experiences": [
+        "CMS-Related Responsibilities:",
+        "Validate the CMS and frontend setup to ensure it is preforming expected",
+        "Assess the CMS configuration to ensure efficiency for the setup team",
+        "Validate the CMS and frontend integration to ensure all supporting features are as expected and overall platform stability",
+        "UX/UI Responsibilities:",
+        "Support on UI redesign task, own from end-to-end",
+        "Collaboration with developers for implementation and testing",
+        "Setup new UI redesign page to be use as a template",
+        "UAT Responsibilities:",
+        "Participate in UAT testing across desktop, mobile web, app, platforms to identify UX/UI and functional issues",
+        "Track issues by raising tickets, oversee ticket progress until close",
+        "Assist in setting up new pages specifically for UAT purposes"
+      ],
+      "imageSrc": "history/central.png"
+    },
+    {
       "role": "Webmasters Intern",
-      "organisation": "Central",
+      "organisation": "Central Group", 
       "startDate": "25 November 2024",
       "endDate": "31 March 2025",
-      "experiences": ["A webmaster manages performance.","They also maintain its security."],
+      "experiences": [
+        "Managed and maintained website content using Magento, ensuring up-to-date and accurate information",
+        "Assisted in UX/UI design using Figma, creating wireframes and prototypes to enhance user experience",
+        "Supported frontend development using HTML, CSS, and JavaScript for web pages and internal tools",
+        "Utilized Algolia for Sort SKU management, optimizing product search and filtering efficiency",
+        "Collaborated with cross-functional teams to optimize website performance and structure"
+      ],
       "imageSrc": "history/central.png"
     }
 ]

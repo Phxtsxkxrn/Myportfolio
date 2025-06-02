@@ -26,5 +26,13 @@
     {
       "title": "Figma",
       "imageSrc": "skills/figma.png"
+    },
+    {
+      "title": "Magento",
+      "imageSrc": "skills/magento.png"
+    },
+    {
+      "title": "Algolia",
+      "imageSrc": "skills/algolia.png"
     }
 ]

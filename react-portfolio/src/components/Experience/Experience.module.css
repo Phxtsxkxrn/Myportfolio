@@ -68,23 +68,54 @@
   flex-direction: row;
   align-items: center;
   gap: 17px;
-  background: #393E46;
-  background: linear-gradient(90deg, #393E46 0%, rgba(25, 55, 109, 0) 100%);
+  background: #393e46;
+  background: linear-gradient(90deg, #393e46 0%, rgba(25, 55, 109, 0) 100%);
   border-radius: 10px;
   padding: 24px;
 }
 
-.historyItem img {
+.historyItemContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoContainer {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orgLogo {
   width: 50px;
+  height: auto;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headerContainer h3 {
+  font-size: 30px;
+  color: var(--color-primary);
+  margin: 0;
 }
 
 .historyItemDetails {
   font-family: var(--font-roboto);
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
 }
 
 .historyItemDetails h3 {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--color-primary);
 }
 
 .historyItemDetails p {
@@ -95,9 +126,63 @@
 .historyItemDetails ul {
   margin-top: 6px;
   list-style-position: inside;
-  font-size: 25px;
+  font-size: 16px;
   list-style-type: disc;
   margin-left: 17px;
+}
+
+.roleInfo {
+  position: relative;
+  padding-left: 25px;
+}
+
+.roleInfo::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  z-index: 2;
+}
+
+.roleInfo::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 17px; /* Start line below the dot */
+  width: 2px;
+  height: calc(100% - 17px); /* Extend to bottom from dot */
+  background-color: var(--color-primary);
+}
+
+.roleInfo:last-child::after {
+  display: none; /* Remove line for last item */
+}
+
+.roleInfo p:first-child {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.duration {
+  font-size: 16px !important;
+  margin-top: 4px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.experienceHeader {
+  font-size: 18px;
+  font-weight: 400; /* Changed from 600 to 400 for normal weight */
+  color: var(
+    --color-text
+  ); /* Changed from var(--color-primary) to use white color */
+  margin-top: 15px;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 830px) {
