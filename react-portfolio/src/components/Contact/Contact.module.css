@@ -51,6 +51,7 @@
   .container {
     flex-direction: column;
     gap: 23px;
+    padding: 40px 20px; /* Reduced padding */
   }
 
   .text {
@@ -59,7 +60,30 @@
     align-items: center;
   }
 
+  .text h2 {
+    font-size: 50px; /* Smaller heading for mobile */
+  }
+
+  .text p {
+    font-size: 20px; /* Smaller text for mobile */
+  }
+
   .links {
     align-items: center;
+    width: 100%; /* Full width for better alignment */
+  }
+
+  .link {
+    width: 100%; /* Full width for links */
+    gap: 15px; /* Reduced gap */
+  }
+
+  .link img {
+    width: 30px; /* Smaller icons */
+  }
+
+  .link a {
+    font-size: 16px; /* Smaller font size */
+    word-break: break-all; /* Allow text to break */
   }
 }
