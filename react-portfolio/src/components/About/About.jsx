@@ -14,22 +14,20 @@ export const About = () => {
                 />
                 <ul className={styles.aboutItems}>
                     <li className={styles.aboutItem}>
-                        <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon"/>
-                        <div className={styles.aboutItemText}>
-                            <h3>Frontend Developer</h3>
-                            <p>
-                                I'm a front-end developer with experience in building responsive 
-                                and optimized websites using HTML, CSS, and JavaScript.
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.aboutItem}>
                         <img src={getImageUrl("about/uiIcon.png")} alt="Server icon"/>
                         <div className={styles.aboutItemText}>
                             <h3>UX/UI Designer</h3>
                             <p>
-                                I'm a UX/UI designer dedicated to creating user-friendly and visually 
-                                appealing designs that improve the user experience.
+                                with a focus on creating intuitive and visually engaging designs that enhance user experience.
+                            </p>
+                        </div>
+                    </li>
+                    <li className={styles.aboutItem}>
+                        <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon"/>
+                        <div className={styles.aboutItemText}>
+                            <h3>Frontend Developer</h3>
+                            <p>
+                                experienced in building responsive and optimized websites using HTML, CSS, and JavaScript.
                             </p>
                         </div>
                     </li>

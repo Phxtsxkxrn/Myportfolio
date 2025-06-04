@@ -34,5 +34,9 @@
     {
       "title": "Algolia",
       "imageSrc": "skills/algolia.png"
+    },
+    {
+      "title": "Jira",
+      "imageSrc": "skills/jira.png"
     }
 ]
