@@ -9,9 +9,8 @@ export default defineConfig({
       localsConvention: "camelCase",
     },
   },
-  base: "/",
   build: {
     outDir: "dist",
-    assetsDir: "assets",
+    sourcemap: true,
   },
 });

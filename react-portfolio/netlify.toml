@@ -1,10 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
-  base = "/"
 
 [build.environment]
-  NODE_VERSION = "18"  # Changed from 20 to more stable version
+  NODE_VERSION = "18.17.0"
 
 [[redirects]]
   from = "/*"
