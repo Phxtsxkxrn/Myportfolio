@@ -33,7 +33,7 @@
 .skills {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr); /* Changed from 3 to 5 columns */
   gap: 25px;
   align-content: flex-start;
 }
@@ -243,6 +243,138 @@
   border-radius: 5px;
 }
 
+.myDesignSection {
+  width: 100%;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: row; /* เปลี่ยนจาก column เป็น row */
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.myDesignItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 320px;
+  width: 100%;
+  gap: 8px;
+}
+
+.myDesignTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fffffe;
+}
+
+.myDesignCover {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.myDesignCover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
+}
+
+.myDesignWorkName {
+  font-size: 17px;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.popupOverlay {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupContent {
+  background: #222831;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
+  position: relative;
+}
+
+.myDesignPopupImg {
+  width: 100vw;
+  max-width: 70vw;
+  height: auto;
+  /* ไม่กำหนด max-height เพื่อให้เลื่อนดูตามความสูงของรูปได้ */
+  border-radius: 0;
+  display: block;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 32px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: #01858a;
+}
+
+.scrollTopBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  left: auto;
+  top: auto;
+  background: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1100;
+}
+
+.scrollTopBtn:hover {
+  background: #01858a;
+}
+
 @media screen and (max-width: 830px) {
   .content {
     flex-direction: column;
@@ -255,7 +387,7 @@
   }
 
   .skills {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for mobile */
     padding: 0 10px;
     gap: 20px;
   }
@@ -267,5 +399,39 @@
 
   .figmaContainer iframe {
     height: 350px;
+  }
+
+  .popupContent {
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+    padding: 0;
+    overflow: auto;
+  }
+
+  .myDesignPopupImg {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    border-radius: 0;
+    display: block;
+  }
+
+  .closeBtn {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .myDesignSection {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .myDesignItem {
+    max-width: 100%;
   }
 }

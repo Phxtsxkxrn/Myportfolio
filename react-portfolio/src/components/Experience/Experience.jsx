@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import styles from "./Experience.module.css";
 import skills from "../../data/skills.json";
@@ -24,6 +24,29 @@ export const Experience = () => {
         return acc;
     }, {});
 
+    const [showDesignPopup, setShowDesignPopup] = useState(false);
+    const [popupImage, setPopupImage] = useState(""); // เพิ่ม state สำหรับรูป popup
+    const popupContentRef = useRef(null);
+
+    // Prevent background scroll when popup is open
+    useEffect(() => {
+        if (showDesignPopup) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [showDesignPopup]);
+
+    // Scroll to top function for popup
+    const handleScrollTop = () => {
+        if (popupContentRef.current) {
+            popupContentRef.current.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    };
+
     return ( 
         <section className={styles.container} id="experience">
             <h2 className={styles.title}>Experience</h2>
@@ -41,17 +64,61 @@ export const Experience = () => {
                             );
                         })}
                     </div>
-                    <div className={styles.figmaContainer}>
-                        <h3 className={styles.figmaTitle}>My Design Work</h3>
-                        <div className={styles.figmaFrame}>
-                            <iframe 
-                                style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-                                width="800"
-                                height="450"
-                                src="https://embed.figma.com/design/9GqjbBSsitHxXiGJwUEGWv/All-Work?node-id=0-1&embed-host=share"
-                                allowFullScreen
+                    <h3 className={styles.myDesignTitle}>My Design</h3>
+                    <div className={styles.myDesignSection}>
+                        <div className={styles.myDesignItem}>
+                            <img
+                                src={getImageUrl("mydesign/Main-Faqs.png")}
+                                alt="My Design Cover"
+                                className={styles.myDesignCover}
+                                onClick={() => {
+                                    setPopupImage("mydesign/Faqs.png");
+                                    setShowDesignPopup(true);
+                                }}
+                                style={{ cursor: "pointer" }}
                             />
+                            <div className={styles.myDesignWorkName}>Central FAQ Redesign</div>
                         </div>
+                        <div className={styles.myDesignItem}>
+                            <img
+                                src={getImageUrl("mydesign/Main-Store.png")}
+                                alt="My Design Cover 2"
+                                className={styles.myDesignCover}
+                                onClick={() => {
+                                    setPopupImage("mydesign/Store.png");
+                                    setShowDesignPopup(true);
+                                }}
+                                style={{ cursor: "pointer" }}
+                            />
+                            <div className={styles.myDesignWorkName}>Store Page Redesign</div>
+                        </div>
+                        {showDesignPopup && (
+                            <div className={styles.popupOverlay} onClick={() => setShowDesignPopup(false)}>
+                                <div
+                                    className={styles.popupContent}
+                                    ref={popupContentRef}
+                                    onClick={e => e.stopPropagation()}
+                                >
+                                    <img
+                                        src={getImageUrl(popupImage)}
+                                        alt="My Design Large"
+                                        className={styles.myDesignPopupImg}
+                                    />
+                                    <button className={styles.closeBtn} onClick={() => setShowDesignPopup(false)} aria-label="Close">
+                                        &times;
+                                    </button>
+                                    <button
+                                        className={styles.scrollTopBtn}
+                                        onClick={handleScrollTop}
+                                        aria-label="Scroll to top"
+                                        type="button"
+                                        style={{ position: "fixed", bottom: 32, right: 32, top: "auto" }}
+                                    >
+                                        ↑
+                                    </button>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
                 <ul className={styles.history}>
