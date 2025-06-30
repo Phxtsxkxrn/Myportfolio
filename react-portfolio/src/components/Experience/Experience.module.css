@@ -263,9 +263,11 @@
 }
 
 .myDesignTitle {
-  font-size: 22px;
-  font-weight: 600;
-  color: #fffffe;
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
 }
 
 .myDesignCover {
