@@ -3,8 +3,30 @@
 .container {
   margin-top: 76px;
   color: var(--color-text);
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-top: 32px;
+  }
+  .projectsRow {
+    gap: 12px;
+  }
+  .projectSectionH {
+    min-width: 90vw;
+    max-width: 100vw;
+    flex: 1 1 100vw;
+  }
 }
 
 .title {
@@ -23,4 +45,91 @@
   justify-content: flex-start;
   gap: 15px;
   width: 100%;
+}
+
+.projectsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 37px;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.projectSection {
+  width: 100%;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  background: var(--color-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.projectSectionH {
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+  max-width: 340px;
+  flex: 1 1 260px;
+  background: var(--color-secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.projectToggle {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  padding: 18px 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.projectToggleH {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+  padding: 18px 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.projectToggle[aria-expanded="true"] {
+  background: var(--color-dark);
+}
+
+.projectToggleH[aria-expanded="true"] {
+  background: var(--color-dark);
+}
+
+.projectContent {
+  padding: 0 20px 18px 20px;
+  animation: fadeIn 0.2s;
+}
+
+.projectContentH {
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
