@@ -10,7 +10,7 @@ export const Hero = () => {
                 <p className={styles.description}>
                     Final-year Computer Engineering and Information Technology student specializing in UX/UI design. Proficient in Figma, with experience in real-world projects, including work with Central Group.
                 </p>
-                <a href="mailto:epsk.coin@gmail.com" className={styles.contactBtn}>
+                <a href="mailto:sing.phatsakorn@gmail.com" className={styles.contactBtn}>
                     Contact Me
                 </a>
             </div>
