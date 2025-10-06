@@ -38,5 +38,9 @@
     {
       "title": "Jira",
       "imageSrc": "skills/jira.png"
+    },
+    {
+      "title": "TestRail",
+      "imageSrc": "skills/testrail.png"
     }
 ]

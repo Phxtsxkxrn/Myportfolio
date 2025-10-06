@@ -253,6 +253,14 @@
   flex-wrap: wrap;
 }
 
+.myDesignRow {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .myDesignItem {
   display: flex;
   flex-direction: column;
@@ -377,6 +385,22 @@
   background: #01858a;
 }
 
+.myDesignGroup {
+  width: 100%;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.myDesignGroupTitle {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  margin-top: 12px;
+}
+
 @media screen and (max-width: 830px) {
   .content {
     flex-direction: column;
@@ -429,6 +453,11 @@
   }
 
   .myDesignSection {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .myDesignRow {
     flex-direction: column;
     gap: 10px;
   }

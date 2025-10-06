@@ -66,31 +66,53 @@ export const Experience = () => {
                     </div>
                     <h3 className={styles.myDesignTitle}>My Design</h3>
                     <div className={styles.myDesignSection}>
-                        <div className={styles.myDesignItem}>
-                            <img
-                                src={getImageUrl("mydesign/Main-Faqs.png")}
-                                alt="My Design Cover"
-                                className={styles.myDesignCover}
-                                onClick={() => {
-                                    setPopupImage("mydesign/Faqs.png");
-                                    setShowDesignPopup(true);
-                                }}
-                                style={{ cursor: "pointer" }}
-                            />
-                            <div className={styles.myDesignWorkName}>Central FAQ Redesign</div>
+                        <div className={styles.myDesignGroup}>
+                            <div className={styles.myDesignGroupTitle}>Official Designs</div>
+                            <div className={styles.myDesignRow}>
+                                <div className={styles.myDesignItem}>
+                                    <img
+                                        src={getImageUrl("mydesign/Main-Faqs.png")}
+                                        alt="My Design Cover"
+                                        className={styles.myDesignCover}
+                                        onClick={() => {
+                                            setPopupImage("mydesign/Faqs.png");
+                                            setShowDesignPopup(true);
+                                        }}
+                                        style={{ cursor: "pointer" }}
+                                    />
+                                    <div className={styles.myDesignWorkName}>Central FAQ Redesign</div>
+                                </div>
+                                <div className={styles.myDesignItem}>
+                                    <img
+                                        src={getImageUrl("mydesign/Main-Store.png")}
+                                        alt="My Design Cover 2"
+                                        className={styles.myDesignCover}
+                                        onClick={() => {
+                                            setPopupImage("mydesign/Store.png");
+                                            setShowDesignPopup(true);
+                                        }}
+                                        style={{ cursor: "pointer" }}
+                                    />
+                                    <div className={styles.myDesignWorkName}>Store Page Redesign</div>
+                                </div>
+                            </div>
                         </div>
-                        <div className={styles.myDesignItem}>
-                            <img
-                                src={getImageUrl("mydesign/Main-Store.png")}
-                                alt="My Design Cover 2"
-                                className={styles.myDesignCover}
-                                onClick={() => {
-                                    setPopupImage("mydesign/Store.png");
-                                    setShowDesignPopup(true);
-                                }}
-                                style={{ cursor: "pointer" }}
-                            />
-                            <div className={styles.myDesignWorkName}>Store Page Redesign</div>
+                        <div className={styles.myDesignGroup}>
+                            <div className={styles.myDesignGroupTitle}>Portfolio Design</div>
+                            {/* ตัวอย่างผลงานที่ไม่ใช่ official */}
+                            <div className={styles.myDesignItem}>
+                                <img
+                                    src={getImageUrl("mydesign/Main-Uniqlo.png")}
+                                    alt="Portfolio Design Cover"
+                                    className={styles.myDesignCover}
+                                    onClick={() => {
+                                        setPopupImage("mydesign/Uniqlo.png");
+                                        setShowDesignPopup(true);
+                                    }}
+                                    style={{ cursor: "pointer" }}
+                                />
+                                <div className={styles.myDesignWorkName}>App Uniqlo Redesigns</div>
+                            </div>
                         </div>
                         {showDesignPopup && (
                             <div className={styles.popupOverlay} onClick={() => setShowDesignPopup(false)}>
@@ -148,6 +170,16 @@ export const Experience = () => {
                                                         <img 
                                                             src={getImageUrl("skills/jira.png")} 
                                                             alt="Jira"
+                                                            className={styles.roleSkillIcon}
+                                                        />
+                                                        <img 
+                                                            src={getImageUrl("skills/testrail.png")} 
+                                                            alt="TestRail"
+                                                            className={styles.roleSkillIcon}
+                                                        />
+                                                        <img 
+                                                            src={getImageUrl("skills/algolia.png")} 
+                                                            alt="Algolia"
                                                             className={styles.roleSkillIcon}
                                                         />
                                                     </div>

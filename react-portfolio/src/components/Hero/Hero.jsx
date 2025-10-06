@@ -8,7 +8,8 @@ export const Hero = () => {
             <div className={styles.content}>
                 <h1 className={styles.title}>Hi, I'm Phatsakorn</h1>
                 <p className={styles.description}>
-                    Final-year Computer Engineering and Information Technology student specializing in UX/UI design. Proficient in Figma, with experience in real-world projects, including work with Central Group.
+                    Hi, I'm Phatsakorn — a final-year Computer Engineering and Information Technology student with a strong focus on UX/UI design.
+I specialize in creating user-centered digital experiences using Figma and have hands-on experience from real-world projects, including collaborations with Central Group.
                 </p>
                 <a href="mailto:sing.phatsakorn@gmail.com" className={styles.contactBtn}>
                     Contact Me

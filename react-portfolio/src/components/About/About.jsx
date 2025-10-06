@@ -18,7 +18,7 @@ export const About = () => {
                         <div className={styles.aboutItemText}>
                             <h3>UX/UI Designer</h3>
                             <p>
-                                with a focus on creating intuitive and visually engaging designs that enhance user experience.
+                                Focused on crafting intuitive and visually engaging interfaces that elevate user experience across platforms.
                             </p>
                         </div>
                     </li>
@@ -27,7 +27,7 @@ export const About = () => {
                         <div className={styles.aboutItemText}>
                             <h3>Frontend Developer</h3>
                             <p>
-                                experienced in building responsive and optimized websites using HTML, CSS, and JavaScript.
+                                Skilled in building responsive, accessible, and performance-optimized websites using HTML, CSS, and JavaScript.
                             </p>
                         </div>
                     </li>
