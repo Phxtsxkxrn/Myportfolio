@@ -75,7 +75,7 @@ export const Experience = () => {
                                         alt="My Design Cover"
                                         className={styles.myDesignCover}
                                         onClick={() => {
-                                            setPopupImage("mydesign/Faqs.png");
+                                            setPopupImage("mydesign/Faqs.webp");
                                             setShowDesignPopup(true);
                                         }}
                                         style={{ cursor: "pointer" }}
@@ -88,7 +88,7 @@ export const Experience = () => {
                                         alt="My Design Cover 2"
                                         className={styles.myDesignCover}
                                         onClick={() => {
-                                            setPopupImage("mydesign/Store.png");
+                                            setPopupImage("mydesign/Store.webp");
                                             setShowDesignPopup(true);
                                         }}
                                         style={{ cursor: "pointer" }}
@@ -106,7 +106,7 @@ export const Experience = () => {
                                     alt="Portfolio Design Cover"
                                     className={styles.myDesignCover}
                                     onClick={() => {
-                                        setPopupImage("mydesign/Uniqlo.png");
+                                        setPopupImage("mydesign/Uniqlo.webp");
                                         setShowDesignPopup(true);
                                     }}
                                     style={{ cursor: "pointer" }}

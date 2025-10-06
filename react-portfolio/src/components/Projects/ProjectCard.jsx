@@ -8,19 +8,22 @@ export const ProjectCard = ({
   hideImage = false,
 }) => {
   const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const modalContentRef = useRef(null);
 
   // Array of images for Warehouse Management vertical scroll
   const warehouseImages = [
-    "projects/Warehouse-Management-System-Simulation-All/Warehouse-management.png",
-    // เพิ่ม path รูปอื่นๆ ได้ที่นี่
-    // "projects/Warehouse-Management-System-Simulation-All/another-image.png",
+    "projects/Warehouse-Management-System-Simulation-All/Warehouse-management.webp"
   ];
 
   const handleImageClick = () => {
     if (title === "Warehouse Management") {
       setShowModal(true);
     }
+  };
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
   };
 
   // Prevent background scroll when modal is open
@@ -45,12 +48,15 @@ export const ProjectCard = ({
     <div className={styles.container}>
       {!hideImage && (
         <>
+          {isLoading && <div className={styles.imagePlaceholder}>Loading...</div>}
           <img
             src={getImageUrl(imageSrc)}
             alt={`Image of ${title}`}
-            className={styles.image}
+            className={`${styles.image} ${isLoading ? styles.hidden : ''}`}
             style={title === "Warehouse Management" ? { cursor: "pointer" } : {}}
             onClick={handleImageClick}
+            onLoad={handleImageLoad}
+            loading="lazy"
           />
           {title === "Warehouse Management" && showModal && (
             <div className={styles.modalOverlay} onClick={() => setShowModal(false)}>
