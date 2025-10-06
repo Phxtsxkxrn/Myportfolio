@@ -1,7 +1,7 @@
 [
   {
     "title": "Warehouse Management",
-    "imageSrc": "projects/Central Warehouse Management System Simulation.png",
+    "imageSrc": "projects/Warehouse-Management-System-Simulation-All/Product-List.png",
     "description": "Inventory management simulation.",
     "skills": ["React", "JavaScript", "CSS", "HTML"],
     "source": "https://github.com/Phxtsxkxrn/Inventory-Management"
